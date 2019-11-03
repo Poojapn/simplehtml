@@ -1,0 +1,60 @@
+<html>
+<head>
+     <style>
+         .red {
+             color: red;
+         }
+    
+    
+    
+    </style>
+</head>
+<body>
+<table>
+<thead>
+    <th>name</th>
+    <th>age</th>
+    <th>class</th>
+    
+</thead>
+<tbody id="capture">
+    
+    
+</tbody>    
+</table>
+  <button onclick="play()" >click me </button>
+</body>
+ <script>
+   function play(){
+         var a = [
+             {'name':'shreyas','age':55,'class':'be'},
+             {'name':'shreyas2','age':55,'class':'ber'},
+             {'name':'shreyas3','age':55,'class':'bee'}
+         ]
+         
+     var s = document.getElementById('capture')
+     
+     s.innerHTML=""
+      for(var i=0;i<a.length;i++){
+             
+      s.innerHTML= s.innerHTML+"<tr><td>"+a[i]['name']+"</td><td>"+a[i]['age']+"</td><td>"+a[i]['class']+"</td></tr>"     
+    
+
+             
+         
+     }
+     }
+     
+     var str= "<tbody id='capture'><tr><td>shreyas</td><td>55</td><td>be</td></tr><tr><td>shreyas2</td><td>55</td><td>ber</td></tr><tr><td>shreyas3</td><td>55</td><td>bee</td></tr></tbody>"
+    
+     var s = document.getElementById('capture')
+     s.innerHTML=str
+     
+     
+</script>  
+</html>
+    
+    
+    
+    
+    

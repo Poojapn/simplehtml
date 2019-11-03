@@ -1,0 +1,60 @@
+
+<html>
+<head>
+     <script src="https://kit.fontawesome.com/4632da1aef.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="3wmaindiv"></div>
+    
+    <i class="far fa-dot-circle"></i>
+    <input type="text" id="inputdiv">
+    
+    
+    <table>
+    <thead id="header">
+     
+        
+        </thead>
+    <tbody id="appenddiv">
+
+            
+        
+        
+        </tbody>
+    
+    
+    </table>
+    
+    
+    <button onclick="ajax()">clickme</button>
+</body>
+ <script>
+     
+function ajax(){
+    var results=''
+    var http = new XMLHttpRequest()
+    http.open('GET',"https://reqres.in/api/users",true)
+    http.send()
+    http.onreadystatechange = function(){
+        if(this.readyState ==4 && this.status==200){
+                  
+            
+           results= JSON.parse(this.response)
+            for(i=0;i<results['data'].length;i++){  
+                console.log(results['data'][i]['id'])
+            }
+        }
+        
+    }
+    
+}
+     
+     
+</script>  
+</html>
+    
+    
+    
+    
+    
